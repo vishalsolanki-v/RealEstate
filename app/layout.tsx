@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Inter, Space_Grotesk ,Playfair_Display} from 'next/font/google'
 import "./globals.css";
 const interFont = Inter({
   subsets: ['latin'],
@@ -10,6 +10,11 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-spaceGrotest'
+})
+const PlayfairDisplay = Playfair_Display({
+  subsets: ['cyrillic'],
+  weight: ['600'],
+  variable: '--font-playfairDisplay'
 })
 
 export const metadata: Metadata = {
@@ -24,7 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-         <body className={`${interFont.variable} ${spaceGrotesk.variable}`}>
+      {/* by providing them here now i can access these varibale in global css or any other css or page */}
+         <body className={`${interFont.variable} ${spaceGrotesk.variable} ${PlayfairDisplay.variable}`}>
                         {children}
                     </body>
     </html>

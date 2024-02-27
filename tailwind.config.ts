@@ -13,9 +13,15 @@ const config = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+    },
+    // define every classes if u r using screen outside container else it  will break
+    screens: {
+      "xs": "400px",
+      "2xl": "1400px",
+      'sm': "640px",
+      'md': "768px",
+      'lg': "1024px",
+      'xl': "1280px",
     },
     extend: {
       colors: {
