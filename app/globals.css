@@ -88,6 +88,9 @@
            font-family: var(--font-playfairDisplay), serif;
            letter-spacing: 1px;
       }
+      .fontForBanners{
+        font-family: var(--font-bree), sans-serif;
+      }
 }
 
 h1,h2,h3,h4,h5,h6{
